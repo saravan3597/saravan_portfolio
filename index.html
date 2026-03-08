@@ -1,159 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="scroll-behavior: smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Portfolio</title>
+    <title>Saravan Somanchi | Senior Software Engineer</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      /* CSS Styling */
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.6;
+      :root {
+        --primary: #0f172a;
+        --secondary: #3b82f6;
+        --accent: #eff6ff;
+        --text-main: #334155;
+        --text-light: #64748b;
+        --bg-main: #f8fafc;
+        --bg-card: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
-        color: #333;
-        background-color: #f9f9f9;
       }
-      header {
-        background: #2c3e50;
-        color: #fff;
-        padding: 2rem 0;
+
+      body {
+        font-family: "Inter", sans-serif;
+        color: var(--text-main);
+        background-color: var(--bg-main);
+        line-height: 1.7;
+      }
+
+      /* Navigation */
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+        z-index: 1000;
+        padding: 1rem 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--primary);
+        text-decoration: none;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: var(--text-light);
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: var(--secondary);
+      }
+
+      /* Hero Section */
+      .hero {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 6rem 10% 2rem;
+        background: linear-gradient(135deg, #f8fafc 0%, #e0e7ff 100%);
+      }
+
+      .hero h1 {
+        font-size: 3.5rem;
+        color: var(--primary);
+        line-height: 1.2;
+        margin-bottom: 1rem;
+      }
+
+      .hero h2 {
+        font-size: 1.75rem;
+        color: var(--secondary);
+        margin-bottom: 1.5rem;
+        font-weight: 600;
+      }
+
+      .hero p {
+        font-size: 1.15rem;
+        color: var(--text-light);
+        max-width: 700px;
+        margin-bottom: 2rem;
+      }
+
+      .btn {
+        padding: 0.8rem 2rem;
+        background: var(--primary);
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(15, 23, 42, 0.2);
+        display: inline-block;
+      }
+
+      .btn:hover {
+        background: var(--secondary);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 12px rgba(59, 130, 246, 0.3);
+      }
+
+      /* Sections */
+      section {
+        padding: 5rem 10%;
+      }
+
+      .section-title {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 3rem;
         text-align: center;
       }
-      nav {
-        margin-top: 15px;
+
+      .section-title::after {
+        content: "";
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: var(--secondary);
+        margin: 10px auto 0;
+        border-radius: 2px;
       }
-      nav a {
-        color: #fff;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
+
+      /* About & Skills */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        gap: 4rem;
+      }
+
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+      }
+
+      .skill-tag {
+        background: var(--accent);
+        padding: 0.5rem 1rem;
+        border-radius: 50px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--secondary);
+        border: 1px solid #bfdbfe;
+      }
+
+      /* Experience Timeline */
+      .experience-item {
+        background: var(--bg-card);
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+        margin-bottom: 2rem;
+        border-left: 4px solid var(--secondary);
+        transition: transform 0.3s ease;
+      }
+
+      .experience-item:hover {
+        transform: translateX(5px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      }
+
+      .job-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .job-title {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .job-company {
+        color: var(--secondary);
+        font-weight: 600;
+      }
+
+      .job-date {
+        color: var(--text-light);
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .experience-item ul {
+        margin-left: 1.5rem;
+        color: var(--text-main);
+      }
+
+      .experience-item li {
+        margin-bottom: 0.5rem;
+      }
+
+      /* Contact & Footer */
+      .contact-info {
+        text-align: center;
         font-size: 1.1rem;
+        margin-bottom: 2rem;
       }
-      nav a:hover {
+
+      .contact-info a {
+        color: var(--secondary);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .contact-info a:hover {
         text-decoration: underline;
       }
-      .container {
-        max-width: 900px;
-        margin: 20px auto;
-        padding: 20px;
-        background: #fff;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-      }
-      section {
-        margin-bottom: 50px;
-      }
-      h2 {
-        border-bottom: 2px solid #3498db;
-        padding-bottom: 10px;
-        color: #2c3e50;
-      }
-      .project-card {
-        border-left: 4px solid #3498db;
-        background: #f4f7f6;
-        padding: 20px;
-        border-radius: 4px;
-        margin-bottom: 20px;
-      }
-      .skills-list {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        list-style: none;
-        padding: 0;
-      }
-      .skills-list li {
-        background: #ecf0f1;
-        color: #2c3e50;
-        padding: 8px 15px;
-        border-radius: 20px;
-        font-weight: 500;
-        font-size: 0.95rem;
-      }
+
       footer {
         text-align: center;
-        padding: 20px;
-        margin-top: 40px;
-        color: #7f8c8d;
+        padding: 2rem;
+        background: var(--primary);
+        color: white;
         font-size: 0.9rem;
+      }
+
+      @media (max-width: 768px) {
+        .hero h1 {
+          font-size: 2.5rem;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 2rem;
+        }
+        .job-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .nav-links {
+          display: none;
+        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <h1>[Your Name Here]</h1>
-      <nav>
+    <nav>
+      <a href="#" class="logo">Saravan Somanchi</a>
+      <div class="nav-links">
         <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-      </nav>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <h1>Hi, I'm Saravan Somanchi.</h1>
+      <h2>Senior Software Engineer</h2>
+      <p>
+        With over 7 years of full-stack experience, I specialize in architecting
+        scalable web applications, executing complex framework migrations, and
+        building robust microfrontend infrastructures. As an AI-Augmented
+        Developer, I leverage custom workflows to boost productivity without
+        compromising code quality.
+      </p>
+      <a href="#contact" class="btn">Get in Touch</a>
     </header>
 
-    <div class="container">
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          Hello! I am a dedicated professional currently based in Hyderabad,
-          India, with plans to relocate to Germany. I focus on modern
-          development practices and scalable infrastructure, bringing a strong
-          analytical mindset to complex technical challenges.
-        </p>
-      </section>
+    <section id="about">
+      <div class="about-grid">
+        <div>
+          <h2
+            style="font-size: 2rem; color: var(--primary); margin-bottom: 1rem"
+          >
+            Profile
+          </h2>
+          <p style="margin-bottom: 1rem">
+            I have a proven track record of modernizing enterprise applications,
+            utilizing the JavaScript, Angular, React, and Node.js/Nest.js
+            ecosystems. My approach combines strong cloud foundations (AWS,
+            CI/CD automation) with cutting-edge AI tools like Claude Code to
+            accelerate development lifecycles.
+          </p>
+          <p>
+            Currently based in India, I am an active German Opportunity Card
+            (Chancenkarte) holder with A2 proficiency in German, actively
+            preparing for relocation and integration into the German tech
+            ecosystem in Berlin.
+          </p>
 
-      <section id="skills">
-        <h2>Technical Skills</h2>
-        <ul class="skills-list">
-          <li>AWS Networking (VPC, Route 53, Subnets)</li>
-          <li>AI-Assisted Development</li>
-          <li>HTML / CSS / Git</li>
-          <li>Data Analysis & Behavioral Frameworks</li>
+          <h3 style="margin-top: 2rem; color: var(--primary)">
+            Education & Certifications
+          </h3>
+          <ul
+            style="
+              margin-top: 1rem;
+              margin-left: 1.5rem;
+              color: var(--text-main);
+            "
+          >
+            <li>
+              <strong>Executive PG in Fullstack Development</strong> - IIIT
+              Bengaluru (2022 - 2023)
+            </li>
+            <li>
+              <strong>B.Tech in Electrical Engineering</strong> - JNTU Kakinada
+              (2015 - 2019)
+            </li>
+            <li><strong>Claude Code in Action</strong> (Anthropic)</li>
+            <li><strong>AWS Essentials Training for Developers</strong></li>
+          </ul>
+        </div>
+        <div>
+          <h3
+            style="
+              font-size: 1.5rem;
+              color: var(--primary);
+              margin-bottom: 1rem;
+            "
+          >
+            Core Technologies
+          </h3>
+          <div class="skills-container">
+            <span class="skill-tag">JavaScript (ES6+)</span>
+            <span class="skill-tag">TypeScript</span>
+            <span class="skill-tag">Angular</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Node.js / Nest.js</span>
+            <span class="skill-tag">Microfrontends (NX)</span>
+            <span class="skill-tag">AWS & CI/CD</span>
+            <span class="skill-tag">GraphQL & BFF</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Claude Code / AI Tools</span>
+            <span class="skill-tag">GitHub Actions</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" style="background: var(--accent)">
+      <h2 class="section-title">Professional Experience</h2>
+
+      <div class="experience-item">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Senior Software Engineer</div>
+            <div class="job-company">EPAM Systems</div>
+          </div>
+          <div class="job-date">08/2024 - 03/2026</div>
+        </div>
+        <ul>
+          <li>
+            Executed the migration of 13 legacy applications into a modern
+            Microfrontend (MFE) architecture using Angular-elements and an NX
+            monorepo, delivering the first major release in 6 months and
+            accelerating cross-team feature time-to-market by ~40%.
+          </li>
+          <li>
+            Architected a Backend-for-Frontend (BFF) pattern utilizing GraphQL,
+            reducing client-side data processing overhead by 30%.
+          </li>
+          <li>
+            Automated deployment lifecycles by designing GitHub Actions
+            pipelines to securely build, version, and deploy MFEs to AWS S3,
+            achieving near 100% reduction in manual deployment errors.
+          </li>
+          <li>
+            Authored comprehensive technical documentation, serving as a primary
+            technical guide for cross-functional teams adopting the new MFE
+            ecosystem.
+          </li>
         </ul>
-      </section>
+      </div>
 
-      <section id="projects">
-        <h2>Projects & Experience</h2>
+      <div class="experience-item">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Software Development Engineer 2</div>
+            <div class="job-company">Highspot</div>
+          </div>
+          <div class="job-date">01/2024 - 08/2024</div>
+        </div>
+        <ul>
+          <li>
+            Engineered and published an internal npm library leveraging a
+            monorepo architecture, establishing a centralized UI component
+            library for global organizational use.
+          </li>
+          <li>
+            Recognized as the Subject Matter Expert (SME) for monorepo
+            architecture within the regional team.
+          </li>
+          <li>
+            Executed a critical framework migration from a legacy Backbone.js
+            architecture to a modern React.js stack.
+          </li>
+          <li>
+            Pioneered the integration of AI-driven development tools (ChatGPT)
+            to automate unit and E2E test creation in TestCafe.
+          </li>
+        </ul>
+      </div>
 
-        <div class="project-card">
-          <h3>Claude Code In Action</h3>
-          <p><strong>Focus:</strong> AI Integration & Workflow Automation</p>
+      <div class="experience-item">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Frontend Engineer</div>
+            <div class="job-company">Biva Analytics</div>
+          </div>
+          <div class="job-date">04/2022 - 01/2023</div>
+        </div>
+        <ul>
+          <li>
+            Developed a high-performance, server-side rendered (SSR) marketing
+            site using Next.js to improve SEO and load times by up to 80%.
+          </li>
+          <li>
+            Architected an analytics dashboard module from scratch using Angular
+            and Nest.js to track e-commerce ROI.
+          </li>
+          <li>
+            Collaborated tightly with UX teams to integrate complex custom
+            widgets using ApexCharts and a Monaco Editor integration.
+          </li>
+        </ul>
+      </div>
+
+      <div class="experience-item">
+        <div class="job-header">
+          <div>
+            <div class="job-title">Software Engineer</div>
+            <div class="job-company">Tripod Software Solutions</div>
+          </div>
+          <div class="job-date">06/2019 - 04/2022</div>
+        </div>
+        <ul>
+          <li>
+            Served as a key developer for "eureQa" SaaS modernization,
+            personally developing 60% of core features during the migration from
+            AngularJS to Angular 8.
+          </li>
+          <li>
+            Improved application load times and UI usability by 50% through code
+            optimization and modern state management.
+          </li>
+          <li>
+            Maintained zero feature degradation during framework migration,
+            supporting seamless cloud testing capabilities.
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Let's Connect</h2>
+      <div style="max-width: 600px; margin: 0 auto; text-align: center">
+        <p style="margin-bottom: 2rem; font-size: 1.1rem">
+          I am actively preparing for my transition to the German tech sector
+          and am eager to discuss how my expertise in scalable architecture and
+          AI-augmented development can bring value to your engineering team.
+        </p>
+
+        <div class="contact-info">
           <p>
-            Completed comprehensive practical coursework on utilizing advanced
-            AI coding assistants to debug, refactor, and accelerate software
-            development lifecycles.
+            <strong>Email:</strong>
+            <a href="mailto:ssomanchi2742@gmail.com">ssomanchi2742@gmail.com</a>
           </p>
+          <p>
+            <strong>Phone:</strong>
+            <a href="tel:+919963665586">+91 9963665586</a>
+          </p>
+          <p><strong>Location:</strong> Berlin, Germany (Target Location)</p>
         </div>
 
-        <div class="project-card">
-          <h3>AWS Architecture Mockup</h3>
-          <p><strong>Focus:</strong> Cloud Infrastructure</p>
-          <p>
-            Explored and mapped out secure, highly available network topologies
-            utilizing core Amazon Web Services networking principles.
-          </p>
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2>Get In Touch</h2>
-        <p>
-          I am actively looking for new opportunities in the German tech sector
-          and would love to connect.
-        </p>
-        <p>
-          <strong>Email:</strong>
-          <a href="mailto:your.email@example.com">your.email@example.com</a
-          ><br />
-          <strong>LinkedIn:</strong> <a href="#">linkedin.com/in/yourprofile</a
-          ><br />
-          <strong>GitHub:</strong> <a href="#">github.com/yourusername</a>
-        </p>
-      </section>
-    </div>
+        <a
+          href="https://linkedin.com/in/saravan-somanchi"
+          target="_blank"
+          class="btn"
+          >View LinkedIn Profile</a
+        >
+      </div>
+    </section>
 
     <footer>
-      <p>&copy; 2026 [Your Name]. Built and hosted with GitHub Pages.</p>
+      <p>
+        &copy; 2026 Saravan Somanchi. Built with HTML & CSS. Hosted on GitHub
+        Pages.
+      </p>
     </footer>
   </body>
 </html>
