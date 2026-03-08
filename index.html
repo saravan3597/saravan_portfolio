@@ -4,9 +4,156 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
+    <style>
+      /* CSS Styling */
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        color: #333;
+        background-color: #f9f9f9;
+      }
+      header {
+        background: #2c3e50;
+        color: #fff;
+        padding: 2rem 0;
+        text-align: center;
+      }
+      nav {
+        margin-top: 15px;
+      }
+      nav a {
+        color: #fff;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1.1rem;
+      }
+      nav a:hover {
+        text-decoration: underline;
+      }
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+        background: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      section {
+        margin-bottom: 50px;
+      }
+      h2 {
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+        color: #2c3e50;
+      }
+      .project-card {
+        border-left: 4px solid #3498db;
+        background: #f4f7f6;
+        padding: 20px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+      }
+      .skills-list {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+      }
+      .skills-list li {
+        background: #ecf0f1;
+        color: #2c3e50;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        margin-top: 40px;
+        color: #7f8c8d;
+        font-size: 0.9rem;
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome to My Portfolio</h1>
-    <p>Hi, I'm a developer. Check out my projects below.</p>
+    <header>
+      <h1>[Your Name Here]</h1>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="container">
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hello! I am a dedicated professional currently based in Hyderabad,
+          India, with plans to relocate to Germany. I focus on modern
+          development practices and scalable infrastructure, bringing a strong
+          analytical mindset to complex technical challenges.
+        </p>
+      </section>
+
+      <section id="skills">
+        <h2>Technical Skills</h2>
+        <ul class="skills-list">
+          <li>AWS Networking (VPC, Route 53, Subnets)</li>
+          <li>AI-Assisted Development</li>
+          <li>HTML / CSS / Git</li>
+          <li>Data Analysis & Behavioral Frameworks</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects & Experience</h2>
+
+        <div class="project-card">
+          <h3>Claude Code In Action</h3>
+          <p><strong>Focus:</strong> AI Integration & Workflow Automation</p>
+          <p>
+            Completed comprehensive practical coursework on utilizing advanced
+            AI coding assistants to debug, refactor, and accelerate software
+            development lifecycles.
+          </p>
+        </div>
+
+        <div class="project-card">
+          <h3>AWS Architecture Mockup</h3>
+          <p><strong>Focus:</strong> Cloud Infrastructure</p>
+          <p>
+            Explored and mapped out secure, highly available network topologies
+            utilizing core Amazon Web Services networking principles.
+          </p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Get In Touch</h2>
+        <p>
+          I am actively looking for new opportunities in the German tech sector
+          and would love to connect.
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <a href="mailto:your.email@example.com">your.email@example.com</a
+          ><br />
+          <strong>LinkedIn:</strong> <a href="#">linkedin.com/in/yourprofile</a
+          ><br />
+          <strong>GitHub:</strong> <a href="#">github.com/yourusername</a>
+        </p>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2026 [Your Name]. Built and hosted with GitHub Pages.</p>
+    </footer>
   </body>
 </html>
