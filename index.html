@@ -1,302 +1,275 @@
-<!DOCTYPE html>
-<html lang="en" style="scroll-behavior: smooth">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Saravan Somanchi | Senior Software Engineer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Spectral:wght@400;600;700&family=Inter:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link href="app.css" rel="stylesheet" />
   </head>
   <body>
-    <nav>
-      <a href="#" class="logo">Saravan S.</a>
-      <div class="nav-links">
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+    <nav class="navbar">
+      <div class="nav-container">
+        <a href="#" class="nav-brand">Saravan Somanchi</a>
+        <div class="nav-links">
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects & Ed.</a>
+          <a href="#contact" class="btn-nav">Get in Touch</a>
+        </div>
       </div>
     </nav>
 
-    <header class="hero">
-      <div class="hero-text">
-        <h1>Hi, I'm Saravan Somanchi.</h1>
-        <h2>Senior Software Engineer | MFE Expert | AI-Augmented Developer</h2>
-        <p>
-          I architect scalable web applications, execute complex framework
-          migrations, and build robust microfrontend infrastructures (NX
-          monorepos). I leverage custom AI workflows to accelerate productivity
-          by 30-40% without compromising code quality. Active German Opportunity
-          Card (Chancenkarte) holder targeting Berlin.
-        </p>
-        <a href="#contact" class="btn">Connect</a>
+    <header class="hero" id="home">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>
+            Architecting scalable JS/TS ecosystems with
+            <span class="highlight">precision.</span>
+          </h1>
+          <p class="subtitle">
+            Senior Software Engineer with 7+ years of frontend-heavy full-stack
+            experience. I specialize in Angular, React, and Node.js/Nest.js to
+            execute complex migrations, build Microfrontend (NX) architectures,
+            and drive AI-augmented development workflows.
+          </p>
+          <div class="hero-actions">
+            <a href="#experience" class="btn btn-primary">View My Impact</a>
+            <a
+              href="https://linkedin.com/in/saravan-somanchi"
+              target="_blank"
+              class="btn btn-secondary"
+              >LinkedIn Profile</a
+            >
+          </div>
+        </div>
+        <div class="hero-image-wrapper">
+          <div class="photo-placeholder">
+            <img
+              src="./assets/profile-pic.jpg"
+              alt="Saravan Somanchi"
+              style="width: 100%; height: 100%; object-fit: cover"
+            />
+          </div>
+        </div>
       </div>
-      <div class="profile-photo-placeholder">Photo</div>
     </header>
 
-    <section id="experience">
-      <h2 class="section-title">Professional Impact</h2>
-      <p class="section-subtitle">
-        A Senior Software Engineer with over 7 years of full-stack experience
-        specializing in JavaScript, Angular, React, and Nest.js ecosystems.
-      </p>
-
-      <div class="experience-container">
-        <div class="exp-card">
-          <div class="exp-header">
-            <div class="exp-title-role">
-              <div class="exp-company">EPAM Systems</div>
-              <h3>Senior Software Engineer</h3>
-            </div>
-            <div class="exp-date">08/2024 - 03/2026</div>
-          </div>
-          <p class="impact-summary">
-            Led a massive migration of 13 legacy applications into a modern
-            Microfrontend (MFE) architecture using Angular-elements and NX,
-            accelerating cross-team feature time-to-market by
-            <span class="impact-highlight">~40%</span>. Architected BFF patterns
-            with GraphQL, reducing data processing overhead by
-            <span class="impact-highlight">30%</span> and achieved nearly
-            <span class="impact-highlight">100% reduction</span> in manual
-            deployment errors through AWS CI/CD automation.
-          </p>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-header">
-            <div class="exp-title-role">
-              <div class="exp-company">Highspot</div>
-              <h3>Software Development Engineer 2</h3>
-            </div>
-            <div class="exp-date">01/2024 - 08/2024</div>
-          </div>
-          <p class="impact-summary">
-            Served as the monorepo SME, engineering and publishing a centralized
-            global internal npm UI component library. Executed critical
-            framework migration (Backbone.js to React) and pioneered
-            <span class="impact-highlight">AI-driven integration</span> for
-            testing, establishing a new baseline for team development
-            efficiency.
-          </p>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-header">
-            <div class="exp-title-role">
-              <div class="exp-company">Biva Analytics</div>
-              <h3>Frontend Engineer</h3>
-            </div>
-            <div class="exp-date">04/2022 - 01/2023</div>
-          </div>
-          <p class="impact-summary">
-            Developed a high-performance Next.js SSR marketing site, improving
-            SEO and initial load times by up to
-            <span class="impact-highlight">80%</span>. Architected the core
-            e-commerce analytics dashboard using Angular/Nest.js from scratch
-            and integrated complex ApexCharts widgets for dynamic SQL data
-            visualization.
-          </p>
-        </div>
-
-        <div class="exp-card">
-          <div class="exp-header">
-            <div class="exp-title-role">
-              <div class="exp-company">Tripod Software Solutions</div>
-              <h3>Software Engineer</h3>
-            </div>
-            <div class="exp-date">06/2019 - 04/2022</div>
-          </div>
-          <p class="impact-summary">
-            Developed
-            <span class="impact-highlight">60% of core features</span> for the
-            AngularJS to Angular 8 SaaS modernization. Improved overall UI
-            usability and load times by
-            <span class="impact-highlight">50%</span> through modern state
-            management, maintaining zero feature degradation during the
-            migration.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills" style="background-color: var(--bg-alt)">
-      <h2 class="section-title">Technical Expertise</h2>
-      <p class="section-subtitle">
-        Deep expertise across the modern full-stack ecosystem and innovative
-        deployment methodologies.
-      </p>
-
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h3>Programming & Core</h3>
-          <ul class="skill-tags">
-            <li>JavaScript (ES6+)</li>
-            <li>TypeScript</li>
-            <li>RESTful APIs</li>
-            <li>BFF Pattern</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3>Frontend Frameworks</h3>
-          <ul class="skill-tags">
-            <li>Angular</li>
-            <li>React.js</li>
-            <li>Next.js</li>
-            <li>AngularJS (Legacy)</li>
-            <li>Microfrontends (NX)</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3>Backend & Database</h3>
-          <ul class="skill-tags">
-            <li>Node.js</li>
-            <li>Nest.js</li>
-            <li>PostgreSQL</li>
-            <li>GraphQL</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3>DevOps & Cloud</h3>
-          <ul class="skill-tags">
-            <li>AWS (S3, VPC)</li>
-            <li>GitHub Actions</li>
-            <li>CI/CD Pipelines</li>
-            <li>Git / Version Control</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3>AI-Augmented Workflow</h3>
-          <ul class="skill-tags">
-            <li>Claude Code</li>
-            <li>Prompt Engineering</li>
-            <li>Automated Test Generation</li>
-            <li>Workflow Optimization</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h3>Testing & Performance</h3>
-          <ul class="skill-tags">
-            <li>TestCafe</li>
-            <li>Cypress</li>
-            <li>Unit/E2E Testing</li>
-            <li>Lighthouse Profiling</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2 class="section-title">Personal Ventures</h2>
-      <p class="section-subtitle">
-        Explorations in emerging tech and utility tools. (Placeholders—fill with
-        your actual projects).
-      </p>
-
-      <div class="projects-grid">
-        <div class="proj-card">
-          <div>
-            <h3>AI-Powered Unit Test Generator</h3>
-            <p>
-              A CLI tool utilizing advanced prompt engineering techniques to
-              automatically generate cypress and unit test boilerplate based on
-              file context, focusing on accelerating development speed.
-            </p>
-          </div>
-          <ul class="proj-tech">
-            <li>Claude Code</li>
-            <li>Node.js</li>
-            <li>Cypress</li>
-          </ul>
-        </div>
-        <div class="proj-card">
-          <div>
-            <h3>NX Monorepo Microfrontend Starter</h3>
-            <p>
-              A comprehensive starter kit for microfrontend architectures using
-              NX, showcasing efficient versioning strategies and GitHub Actions
-              for secure deployment to AWS S3.
-            </p>
-          </div>
-          <ul class="proj-tech">
-            <li>Angular</li>
-            <li>NX</li>
-            <li>AWS S3</li>
-            <li>GitHub Actions</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="distinct" style="background-color: var(--bg-alt)">
-      <div class="distinct-grid">
-        <div class="distinct-card">
-          <h3>Professional Development</h3>
-          <ul class="distinct-list">
-            <li><strong>Claude Code in Action</strong> – Anthropic</li>
-            <li><strong>AWS Essentials Training for Developers</strong></li>
-            <li>
-              <strong>English Proficiency</strong> – Full Professional
-              Proficiency
-            </li>
-            <li>
-              <strong>German Proficiency</strong> – Elementary (A2 - Actively
-              Learning)
-            </li>
-          </ul>
-        </div>
-        <div class="distinct-card">
-          <h3>Interests & Focus</h3>
-          <ul class="distinct-list">
-            <li>
-              <strong>Mobile Photography</strong> – Complementing my
-              professional focus on pixel-perfect UI engineering with an
-              aesthetic eye.
-            </li>
-            <li>
-              <strong>Language Learning</strong> – Dedicated study of German to
-              ensure seamless integration into the DACH engineering ecosystem.
-            </li>
-            <li>
-              <strong>Strategic Gaming</strong> – Applying strategic thinking
-              and collaborative analysis to complex challenges.
-            </li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2 class="section-title">Get In Touch</h2>
-      <div style="max-width: 650px; margin: 0 auto">
-        <p>
-          I am actively preparing for integration into the German tech sector
-          and welcome discussions on how my expertise in scalable microfrontend
-          architectures and AI-augmented development velocity can drive
-          engineering excellence.
-        </p>
-        <div class="contact-methods">
+    <section class="section bg-light" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <h2>Professional Experience</h2>
           <p>
-            <strong>Email:</strong>
-            <a href="mailto:ssomanchi2742@gmail.com">ssomanchi2742@gmail.com</a>
-            | <strong>Phone:</strong> +91 9963665586
+            Over 7 years driving enterprise modernization, UI/UX performance
+            optimization, and cross-functional engineering excellence.
           </p>
-          <p>Location: Berlin, Germany (Chancenkarte holder)</p>
         </div>
-        <a
-          href="https://linkedin.com/in/saravan-somanchi"
-          target="_blank"
-          class="btn"
-          >View LinkedIn</a
-        >
+
+        <div class="timeline">
+          <div class="card experience-card">
+            <div class="card-header">
+              <div>
+                <h3>Senior Software Engineer</h3>
+                <span class="company">EPAM Systems</span>
+              </div>
+              <span class="date">08/2024 - Present</span>
+            </div>
+            <p>
+              Spearheaded the migration of 13 legacy applications into a
+              cohesive Microfrontend (MFE) architecture using Angular-elements
+              and an NX monorepo, accelerating cross-team feature delivery by
+              <strong>~40%</strong>. Architected a highly efficient GraphQL
+              Backend-for-Frontend (BFF), cutting client-side data processing by
+              <strong>30%</strong>. Engineered automated GitHub Actions
+              pipelines for secure, cache-proof MFE deployments to AWS S3,
+              virtually eliminating manual deployment errors.
+            </p>
+          </div>
+
+          <div class="card experience-card">
+            <div class="card-header">
+              <div>
+                <h3>Software Development Engineer 2</h3>
+                <span class="company">Highspot</span>
+              </div>
+              <span class="date">01/2024 - 08/2024</span>
+            </div>
+            <p>
+              Acted as the regional Subject Matter Expert (SME) for monorepo
+              architectures. Developed and published an internal UI component
+              library (npm) that drove global code reusability. Executed a
+              high-stakes migration from a legacy Backbone.js stack to modern
+              React.js, optimizing Lighthouse accessibility and load scores.
+              Pioneered team adoption of AI-driven tools (ChatGPT) to automate
+              TestCafe E2E/Unit testing.
+            </p>
+          </div>
+
+          <div class="card experience-card">
+            <div class="card-header">
+              <div>
+                <h3>Frontend Engineer</h3>
+                <span class="company">Biva Analytics</span>
+              </div>
+              <span class="date">04/2022 - 01/2023</span>
+            </div>
+            <p>
+              Architected a comprehensive e-commerce ROI analytics dashboard
+              from the ground up using Angular and Nest.js. Integrated Monaco
+              Editor and ApexCharts for complex dynamic SQL visualizations.
+              Additionally developed a Next.js Server-Side Rendered (SSR)
+              marketing site that boosted initial load speeds by up to
+              <strong>80%</strong>, and built a custom Excel parser capable of
+              handling massive chunked data uploads without system timeouts.
+            </p>
+          </div>
+
+          <div class="card experience-card">
+            <div class="card-header">
+              <div>
+                <h3>Software Engineer</h3>
+                <span class="company">Tripod Software Solutions</span>
+              </div>
+              <span class="date">06/2019 - 04/2022</span>
+            </div>
+            <p>
+              Served as a core developer during the "eureQa" SaaS modernization,
+              personally engineering <strong>60%</strong> of the application
+              features during a critical AngularJS to Angular 8 migration.
+              Achieved a <strong>50%</strong> improvement in application load
+              times through rigorous code optimization and state management,
+              maintaining zero feature degradation to support seamless local and
+              cloud (BrowserStack) integrations.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <footer>
-      <p>&copy; 2026 Saravan Somanchi. A minimal, fluid design.</p>
-      <p>Built with Inter & Spectral. Hosted on GitHub Pages.</p>
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <h2>Technical Arsenal</h2>
+          <p>
+            Deep expertise spanning modern frontend frameworks, scalable backend
+            patterns, and cloud-native deployments.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h4>Language & Core</h4>
+            <div class="tags">
+              <span class="tag">JavaScript (ES6+)</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">HTML5 / CSS3</span>
+              <span class="tag">RESTful APIs</span>
+              <span class="tag">GraphQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Frontend Ecosystem</h4>
+            <div class="tags">
+              <span class="tag">Angular</span>
+              <span class="tag">React.js</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">Microfrontends</span>
+              <span class="tag">Ionic (PWAs)</span>
+              <span class="tag">State Management (Redux)</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>Backend & Architecture</h4>
+            <div class="tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Nest.js</span>
+              <span class="tag">BFF Pattern</span>
+              <span class="tag">Microservices</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h4>DevOps, AI & Testing</h4>
+            <div class="tags">
+              <span class="tag">AWS Deployments</span>
+              <span class="tag">GitHub Actions CI/CD</span>
+              <span class="tag">Claude Code / AI Prompting</span>
+              <span class="tag">TestCafe / Cypress</span>
+              <span class="tag">Lighthouse Profiling</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ventures, Education & Certifications</h2>
+          <p>
+            Continuous learning and the application of cutting-edge tooling to
+            solve complex engineering problems.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <div class="card project-card">
+            <h3>AI-Augmented Development Workflows</h3>
+            <p>
+              Actively leveraging AI workflows (Claude Code, advanced prompt
+              engineering) to automate boilerplate generation, unit testing, and
+              E2E creation. Consistently boosting personal and team development
+              productivity by <strong>30-40%</strong> while maintaining strict
+              code quality standards.
+            </p>
+            <div class="project-tech">
+              Claude Code &middot; ChatGPT &middot; Test Automation
+            </div>
+          </div>
+          <div class="card project-card">
+            <h3>Executive PG in Fullstack Development</h3>
+            <p>
+              Completed an intensive Executive Post Graduate program focusing on
+              advanced Fullstack Development, Database Management, and DevOps
+              CI/CD practices.
+            </p>
+            <div class="project-tech">IIIT Bengaluru (10/2022 - 12/2023)</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container contact-container">
+        <h2>Ready to scale your engineering efforts?</h2>
+        <p>
+          I am an active German Opportunity Card (Chancenkarte) holder with A2
+          German proficiency, actively preparing for integration into the German
+          tech ecosystem (Target: Berlin). I am open to new opportunities and
+          technical discussions.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:ssomanchi2742@gmail.com" class="btn btn-primary"
+            >Email</a
+          >
+          <a
+            href="https://linkedin.com/in/saravan-somanchi"
+            target="_blank"
+            class="btn btn-secondary"
+            >Connect on LinkedIn</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; Built on my own</p>
+      </div>
     </footer>
   </body>
 </html>
